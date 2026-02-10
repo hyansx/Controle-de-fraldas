@@ -1,0 +1,25 @@
+version: '3'
+
+services:
+  app:
+    container_name: fraldas-app
+    build:
+      context: .
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - DATABASE_URL=file:/app/db/prod.db
+    volumes:
+      - "./prisma/db:/app/db"
+    networks:
+      - traefik
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.fraldas.rule=Host(`Controledefraldas.atoon.site`)"
+      - "traefik.http.routers.fraldas.entrypoints=websecure"
+      - "traefik.http.routers.fraldas.tls.certresolver=letsencrypt"
+      - "traefik.http.services.fraldas.loadbalancer.server.port=3000"
+
+networks:
+  traefik:
+    external: true

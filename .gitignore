@@ -42,6 +42,6 @@ next-env.d.ts
 
 /src/generated/prisma
 
-# Exclude test and script folders
-/testsprite_tests
-/scripts
+# sqlite
+*.db
+*.db-journal
