@@ -1,0 +1,130 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-bottom: 80px;
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(0,0,0,0.02);
+}
+
+.cardLeft {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.dateBlock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-main);
+  padding: 0.5rem;
+  border-radius: 8px;
+  min-width: 50px;
+}
+
+.day {
+  font-size: 1.2rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.month {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+}
+
+.receiver {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.notes {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.cardRight {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.25rem;
+}
+
+.quantity {
+  font-size: 1.25rem;
+  font-weight: 800;
+}
+
+.badgeIn {
+  color: var(--color-success);
+}
+
+.badgeOut {
+  color: var(--color-critical);
+}
+
+.time {
+  font-size: 0.75rem;
+  color: #9CA3AF;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 3rem;
+  color: var(--text-secondary);
+  background: var(--bg-card);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.backLink {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}

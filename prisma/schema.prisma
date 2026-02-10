@@ -1,0 +1,31 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Transaction {
+  id           String   @id @default(cuid())
+  type         String   // IN (Delivery) or OUT (Consumption)
+  quantity     Int
+  date         DateTime @default(now())
+  receiverName String?  // Specific to IN transactions
+  photoUrl     String?  // Proof of delivery/audit
+  notes        String?
+  unitPrice    Float    @default(0) // Cost per unit for valuation
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+}
+
+model SystemSettings {
+  id                   Int     @id @default(1)
+  dailyConsumptionRate Int     @default(6) // Standard medical prescription
+  bufferDays           Int     @default(15) // Alert when stock is below this many days
+  stockLimitAlert      Boolean @default(true)
+}

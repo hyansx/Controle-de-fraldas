@@ -1,0 +1,104 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  padding-bottom: 80px; /* Space for bottom nav if we add one */
+}
+
+.header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: var(--bg-card);
+  padding: 1rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-soft);
+  border: 1px solid rgba(0,0,0,0.02);
+  transition: transform 0.1s;
+}
+
+.formGroup:focus-within {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--primary-accent);
+}
+
+.label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.input, .textarea {
+  width: 100%;
+  padding: 0.5rem 0;
+  border: none;
+  font-size: 1.1rem;
+  color: var(--text-primary);
+  background: transparent;
+  outline: none;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.input::placeholder {
+  color: #D1D5DB;
+  font-weight: 400;
+}
+
+/* File Input Styling */
+.fileInputWrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.buttonSubmit {
+  background: var(--primary-accent);
+  color: white;
+  padding: 1.25rem;
+  border-radius: var(--radius-lg);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-top: 1rem;
+  box-shadow: 0 4px 6px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s;
+}
+
+.buttonSubmit:active {
+  transform: scale(0.98);
+  box-shadow: none;
+}
+
+.backLink {
+  display: block;
+  text-align: center;
+  margin-top: 2rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
